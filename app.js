@@ -15,8 +15,8 @@ addForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const todo = addForm.add.value.trim();
 
-  if (todo.length) {
+  if (todo.length) { //prevent entering empty string
     generateTemplate(todo);
-    addForm.reset();
+    addForm.reset(); //clear previous
   }
 });
