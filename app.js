@@ -15,8 +15,16 @@ addForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const todo = addForm.add.value.trim();
 
-  if (todo.length) { //prevent entering empty string
+  if (todo.length) {
+    //prevent entering empty string
     generateTemplate(todo);
     addForm.reset(); //clear previous
+  }
+});
+
+// delete todos
+list.addEventListener("click", (e) => {
+  if (e.target.classList.contains("delete")) {
+    e.target.parentElement.remove();
   }
 });
