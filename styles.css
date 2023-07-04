@@ -1,6 +1,22 @@
 body {
-  background: #352f5b;
+  background-image: url("background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
 }
+
+body::after {
+  content: "";
+  position: absolute;
+  top: -24;
+  left: 0;
+  right: 0;
+  bottom: -22;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+  z-index: -1;
+}
+
 .container {
   max-width: 400px;
 }
@@ -8,16 +24,42 @@ input[type="text"],
 input[type="text"]:focus {
   color: #fff;
   border: none;
-  background: rgba(0, 0, 0, 0.2);
+  background: #063672;
   max-width: 400px;
+  font-family: monospace;
 }
 .todos li {
-  background: #423a6f;
+  background: #db0007;
 }
 .delete {
   cursor: pointer;
 }
- 
-.filtered{
-  display: none !important; 
+
+.filtered {
+  display: none !important;
+}
+
+.logo {
+  margin-top: -2px;
+  padding-bottom: 8px;
+}
+
+.form-control::placeholder {
+  color: #fff;
+}
+
+.form-control {
+  border-color: red; /* Change this to your desired color */
+}
+
+h1 {
+  font-family: monospace;
+}
+
+span {
+  font-family: monospace;
+}
+
+.text-light {
+  font-family: monospace;
 }
